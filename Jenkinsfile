@@ -1,20 +1,18 @@
 pipeline {
-    agent any
-
+    agent  any
+    environment {
+        AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+    }
     stages {
-        stage('Build') {
+        stage('Example stage 1') {
             steps {
-                echo 'Building..'
+                //
             }
         }
-        stage('Test') {
+        stage('Example stage 2') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                //
             }
         }
     }

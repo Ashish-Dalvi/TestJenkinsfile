@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Example stage 1') {
             steps {
-                //
+                echo 'Building..'
             }
         }
         stage('Example stage 2') {
             steps {
-                //
+                echo 'Building..'
             }
         }
     }

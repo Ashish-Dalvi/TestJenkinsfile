@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Example stage 1') {
             steps {
-                echo 'Building..'
+                echo $AWS_SECRET_ACCESS_KEY
             }
         }
         stage('Example stage 2') {
